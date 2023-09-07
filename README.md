@@ -5,7 +5,6 @@ Very simple, well-polished, elegant, pomodoro timer.
 <p float="left">
 <img width="400" alt="dark-mode preview" src="https://github.com/DinoZoidDev/pomodoro/assets/38674879/59a597cf-1dcd-4aa9-8865-58bb380484af">
 <img width="400" alt="light-mode preview" src="https://github.com/DinoZoidDev/pomodoro/assets/38674879/a1f4ffe6-7306-4913-a683-308955943c0e">
-
 </p>
 
 ## What I learned

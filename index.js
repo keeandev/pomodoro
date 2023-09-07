@@ -1,3 +1,8 @@
+// const darkThemeColorMeta = document.querySelector(
+//   "meta[name='theme-color'][media='(prefers-color-scheme: dark)']"
+// );
+// const lightThemeColorMeta = document.querySelector("meta[name='theme-color']");
+
 const html = document.documentElement;
 const toggleButton = document.querySelector('[name="theme-toggle"]');
 
