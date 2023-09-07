@@ -1,0 +1,390 @@
+:root {
+  font-family: "Inter";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background: 0, 0%, 98%;
+  --foreground: 0, 0%, 0%;
+  --main: 0, 0%, 95%;
+  --muted: 0, 0%, 90%;
+  --muted-border: 220, 13%, 85%;
+  --border: 220, 13%, 91%;
+  --primary: 350, 74%, 56%;
+  --primary-foreground: 350, 20%, 95%;
+  --secondary: 350, 20%, 85%;
+  --secondary-foreground: 350, 30%, 20%;
+  --destructive: 350, 74%, 56%;
+}
+
+.dark {
+  --background: 0, 0%, 15%;
+  --foreground: 0, 0%, 100%;
+  --main: 0, 0%, 18%;
+  --muted: 0, 0%, 22%;
+  --muted-foreground: 0, 0%, 80%;
+  --muted-border: 0, 0%, 30%;
+  --border: 220, 2%, 28%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: hsl(var(--foreground));
+}
+
+html {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 32.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+  background-color: hsl(var(--main));
+  gap: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer {
+  text-align: center;
+}
+
+p {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 70%);
+}
+
+a,
+a:visited {
+  color: hsl(var(--primary));
+  transition: outline-width 50ms ease;
+}
+
+a:focus {
+  border-radius: 3px;
+  outline: 1px solid hsl(var(--primary));
+  outline-offset: 0.05rem;
+}
+
+dialog[open] {
+  position: absolute;
+  margin: auto;
+  border: none !important;
+  transition: outline-width 50ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+dialog:focus {
+  outline: 1px solid hsl(var(--primary));
+}
+
+#timer {
+  font-weight: 700;
+  font-size: 6rem;
+  display: block;
+  letter-spacing: -0.05em;
+  text-align: center;
+  width: 100%;
+}
+
+.card {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--muted-border));
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.secondary:hover {
+  background-color: hsla(var(--secondary), 0.82);
+}
+
+.secondary:focus {
+  outline: 1px solid hsl(var(--secondary));
+}
+
+.secondary:disabled {
+  background-color: hsla(var(--secondary), 0.6);
+}
+
+.muted {
+  background-color: hsla(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.muted:focus {
+  outline: 1px solid hsl(var(--muted-border));
+}
+
+.muted:hover {
+  background-color: hsla(var(--muted), 0.7);
+}
+
+.icon {
+  padding: 0.4rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  font-family: inherit;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 50ms ease, outline-width 50ms ease;
+}
+
+button:focus {
+  outline: 1px solid hsl(var(--primary));
+  outline-offset: 0.1rem;
+}
+
+button:hover {
+  background-color: hsla(var(--primary), 0.82);
+}
+
+button:disabled {
+  background-color: hsla(var(--primary), 0.6);
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#buttons > button {
+  display: flex;
+  flex: 1;
+  padding: 0.6rem 3rem;
+  letter-spacing: -0.025em;
+}
+
+p:has(input) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  color: inherit;
+  padding: 0.3rem;
+  background-color: hsla(var(--muted-border));
+  transition: background-color 50ms ease, outline-width 50ms ease;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: 1px solid hsl(var(--primary));
+  outline-offset: 0.1rem;
+}
+
+#stats {
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  width: 100%;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--muted-border));
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  min-width: min-content;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+#stats > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+
+.stat {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 2.6rem;
+}
+
+.stat-title {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+#tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#tasks-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#icon-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  gap: 0.3rem;
+}
+
+#icon-wrapper > svg {
+  color: hsl(var(--primary));
+}
+
+#delete-all-tasks-button:focus {
+  outline: 1px solid hsl(var(--destructive));
+}
+
+#add-first-task-button {
+  width: 100%;
+  background-color: hsl(var(--muted));
+  border: 1px dashed hsl(var(--muted-border));
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  font-weight: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#add-first-task-button:hover {
+  background-color: hsla(var(--muted), 0.7);
+}
+
+#task-dialog {
+  width: 24rem;
+}
+
+.dialog-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+#task-dialog > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task {
+  width: 100%;
+  background-color: hsl(var(--muted));
+  border: 1px solid hsl(var(--muted-border));
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  font-weight: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task:hover {
+  background-color: hsla(var(--muted), 0.7);
+}
+
+.task-aside {
+  display: flex;
+  flex: 1;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: end;
+}
+
+.delete-task {
+  display: block;
+  border: none;
+  font-family: inherit;
+  padding: 0rem;
+  background-color: transparent;
+  box-shadow: none;
+  color: hsl(var(--primary));
+}
+
+.delete-task:hover {
+  background-color: transparent;
+}
+
+.delete-task:focus {
+  outline: 1px solid hsl(var(--primary));
+  outline-offset: 0.1rem;
+  border-radius: 4px;
+}
+
+.task-progress {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 70%);
+}
+
+.task-name {
+  font-size: 1rem;
+}
+
+.task-description {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 70%);
+  max-width: 14rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+}
