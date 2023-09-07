@@ -1,4 +1,5 @@
 # pomodoro
+
 Very simple, elegant, pomodoro timer.
 
 <p float="left">
@@ -7,14 +8,14 @@ Very simple, elegant, pomodoro timer.
 
 </p>
 
-
 ## What I learned
-* How to serialize, de-serialize, and rehydrate object arrays w/ HTML element references
-* How to use the new <dialog /> component in HTML (manipulating it in JavaScript)
-* How to reuse lots of conditional HTML with attributes
-* How to use remote scripts from a JavaScript CDN
-* How to use the browser Notification API (prompt, send, and dismiss them properly)
-* Cloning HTML elements & modifying their attributes
-* Stopping parent event handlers w/ preventDefault & stopPropagation
-* * How useful it is to use tools like React/Next.js & TailwindCSS for DOM manipulation & in-general better styling standards
-* How much better TypeScript is then JavaScript
+
+- How to serialize, de-serialize, and rehydrate object arrays w/ HTML element references
+- How to use the new <dialog /> component in HTML (manipulating it in JavaScript)
+- How to reuse lots of conditional HTML with attributes
+- How to use remote scripts from a JavaScript CDN
+- How to use the browser Notification API (prompt, send, and dismiss them properly)
+- Cloning HTML elements & modifying their attributes
+- Stopping parent event handlers w/ preventDefault & stopPropagation
+- How useful it is to use tools like React/Next.js & TailwindCSS for DOM manipulation & in-general better styling standards
+- How much better TypeScript is then JavaScript

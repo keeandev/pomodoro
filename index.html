@@ -21,7 +21,7 @@
           <button id="cancel" class="secondary">Cancel</button>
         </div>
       </div>
-      <div id="stats">
+      <!-- <div id="stats">
         <div>
           <span class="stat-title">Pomodoros</span>
           <div id="pomodoros" class="stat"></div>
@@ -30,7 +30,7 @@
           <span class="stat-title">Breaks</span>
           <div id="breaks" class="stat"></div>
         </div>
-      </div>
+      </div> -->
       <div id="tasks">
         <h2 id="tasks-title">
           <svg
@@ -52,7 +52,7 @@
           </svg>
           Tasks
           <div id="icon-wrapper">
-            <button id="delete-all-tasks-button" class="muted icon">
+            <button id="delete-all-tasks-button" class="icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -75,7 +75,7 @@
                 <line x1="17" x2="22" y1="22" y2="17" />
               </svg>
             </button>
-            <button id="add-task-button" class="muted icon">
+            <button id="add-task-button" class="icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -97,7 +97,7 @@
         <button id="task-template" class="task">
           <div>
             <h3 class="task-name">Task</h3>
-            <p class="task-description">Task description.</p>
+            <p class="task-description muted-foreground">Task description.</p>
           </div>
           <div class="task-aside">
             <p class="task-progress">1/5</p>
@@ -123,7 +123,9 @@
         <button id="add-first-task-button">
           <div>
             <h3 class="task-title">Add Task</h3>
-            <p class="task-description">Add your first pomodoro task.</p>
+            <p class="task-description muted-foreground">
+              Add your first pomodoro task.
+            </p>
           </div>
           <div id="icon-wrapper">
             <svg
@@ -153,7 +155,9 @@
           <form>
             <div>
               <h3 id="task-dialog-title">Add Task</h3>
-              <p id="task-dialog-description">Add a pomodoro task.</p>
+              <p id="task-dialog-description" class="muted">
+                Add a pomodoro task.
+              </p>
             </div>
             <p>
               <label for="task-name">Task Name</label>

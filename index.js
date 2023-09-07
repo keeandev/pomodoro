@@ -189,8 +189,10 @@ const hydrateTask = (task) => {
 
     // workaround for right click on focus (for svg)
     deleteTaskElement.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") deleteAction();
-      stopBubbling(e);
+      if (e.key === "Enter") {
+        deleteAction();
+        stopBubbling(e);
+      }
     });
 
     deleteTaskElement.addEventListener("click", (e) => {
@@ -232,8 +234,8 @@ let tasks = [];
 tasks = getTasksFromStorage();
 
 setTime(time);
-pomodorosText.innerHTML = pomodoros;
-breaksText.innerHTML = breaks;
+// pomodorosText.innerHTML = pomodoros;
+// breaksText.innerHTML = breaks;
 taskTemplate.style.display = "none";
 deleteAllTasksButton.style.display = "none";
 updateConditionalButtons();
@@ -243,7 +245,7 @@ const startTimer = (finishCallback) => {
     time.setTime(time.getTime() - 1000);
     if (time <= 0) finishCallback();
     setTime(time);
-  }, 1);
+  }, 1000);
 
   startButton.innerHTML = "Pause";
 };
@@ -281,7 +283,7 @@ const finishedWorkCycle = () => {
   }
 
   pomodoros++;
-  pomodorosText.innerHTML = pomodoros;
+  // pomodorosText.innerHTML = pomodoros;
 
   manageTaskCycle();
 
@@ -301,7 +303,7 @@ const finishedBreakCycle = () => {
   }
 
   breaks++;
-  breaksText.innerHTML = breaks;
+  // breaksText.innerHTML = breaks;
 
   startTimer(() => finishedWorkCycle());
 };

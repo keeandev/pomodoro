@@ -6,7 +6,8 @@
   --background: 0, 0%, 98%;
   --foreground: 0, 0%, 0%;
   --main: 0, 0%, 95%;
-  --muted: 0, 0%, 90%;
+  --muted: 0, 0%, 88%;
+  --muted-foreground: 0, 0%, 50%;
   --muted-border: 220, 13%, 85%;
   --border: 220, 13%, 91%;
   --primary: 350, 74%, 56%;
@@ -21,7 +22,7 @@
   --foreground: 0, 0%, 100%;
   --main: 0, 0%, 18%;
   --muted: 0, 0%, 22%;
-  --muted-foreground: 0, 0%, 80%;
+  --muted-foreground: 0, 0%, 70%;
   --muted-border: 0, 0%, 30%;
   --border: 220, 2%, 28%;
 }
@@ -71,7 +72,6 @@ footer {
 
 p {
   font-size: 0.75rem;
-  color: hsl(0, 0%, 70%);
 }
 
 a,
@@ -135,9 +135,12 @@ dialog:focus {
   background-color: hsla(var(--secondary), 0.6);
 }
 
+.muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
 .muted {
   background-color: hsla(var(--muted));
-  color: hsl(var(--muted-foreground));
 }
 
 .muted:focus {
@@ -148,8 +151,18 @@ dialog:focus {
   background-color: hsla(var(--muted), 0.7);
 }
 
-.icon {
+.icon-button {
   padding: 0.4rem;
+  background-color: hsla(var(--muted), 0.5);
+  color: hsla(var(--muted-foreground));
+}
+
+.dark .icon-button:hover {
+  background-color: hsla(var(--muted), 0.7);
+}
+
+.icon-button:hover {
+  background-color: hsla(var(--muted), 1);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -296,7 +309,6 @@ input:focus {
 
 #add-first-task-button {
   width: 100%;
-  background-color: hsl(var(--muted));
   border: 1px dashed hsl(var(--muted-border));
   text-align: left;
   padding: 0.6rem 0.5rem;
@@ -306,8 +318,20 @@ input:focus {
   gap: 0.5rem;
 }
 
-#add-first-task-button:hover {
+.dark #add-first-task-button {
+  background-color: hsl(var(--muted));
+}
+
+.dark #add-first-task-button:hover {
   background-color: hsla(var(--muted), 0.7);
+}
+
+#add-first-task-button {
+  background-color: hsla(var(--muted), 0.7);
+}
+
+#add-first-task-button:hover {
+  background-color: hsla(var(--muted), 1);
 }
 
 #task-dialog {
@@ -382,7 +406,7 @@ input:focus {
 
 .task-description {
   font-size: 0.75rem;
-  color: hsl(0, 0%, 70%);
+  /* color: hsl(0, 0%, 70%); */
   max-width: 14rem;
   text-overflow: ellipsis;
   overflow: hidden;
